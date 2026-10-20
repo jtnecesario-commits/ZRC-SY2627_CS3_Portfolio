@@ -1,0 +1,35 @@
+class CD:
+    def __init__(self, administration, officialannouncements):
+        
+        self.administration = administration
+        self.officialannouncements = officialannouncements
+
+    def campus(self):
+        print(self.administration)
+
+    def announcements(self):
+        print(self.officialannouncements)
+
+
+class CID(CD):
+    def cid_info(self):
+        print("Curriculum and Instruction Division")
+
+
+class SSD(CD):
+    def ssd_info(self):
+        print("Student Services Department")
+
+
+cid = CID("School Administration is currently on hold, wait for further announcements .", "Enrollment is now open!, contact us for more information.")
+ssd = SSD("Student Services and purchasable items are now available ", "Reminder. School ID is required for clearance.")
+
+cid.campus()
+cid.announcements()
+cid.cid_info()
+
+print()
+
+ssd.campus()
+ssd.announcements()
+ssd.ssd_info()
