@@ -30,8 +30,8 @@ class PhilHealthPatient(Patient):
         return self.get_bill_amount() * 0.85
 patients = [
     Patient("Juan Dela Cruz", 15000), # JUANHAND, or wtv the name was
-    SeniorPatient("Hillary Legaspi", 1000),
-    PhilHealthPatient("Yrvic Barrium", 25000)]
+    SeniorPatient("B", 1000),
+    PhilHealthPatient("A", 25000)]
 
 for patient in patients:
     print("Patient Name:", patient.get_name())
