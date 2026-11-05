@@ -1,0 +1,36 @@
+# a. What is duck typing, as explained in the video?
+
+# Duck typing is a concept in Python where an object is identified by what it can do rather than what 
+# class it belongs to. This means that different objects can perform the same action as long as they have the required method. 
+# It allows different classes to work together without needing to inherit from the same parent class.
+
+# b. What did the Car class need to have so it could work inside the same loop as Dog and Cat, even if it does not 
+# inherit from the Animal class?
+
+# The Car class needed to have the same method, which is move() or the required method being called in the loop. 
+# Even though Car does not inherit from the Animal class, it can still work with Dog and Cat because it has the required method.
+# This demonstrates duck typing in Python.
+
+#car car vroom vroom
+class Car:
+    def move(self):
+        print("The car drives on the road.")
+
+class Boat:
+    def move(self):
+        print("The boat sails on water.")
+
+class Drone:
+    def move(self):
+        print("The drone flies in the sky.")
+
+def start_trip(vehicle):
+    vehicle.move()
+
+car = Car()
+boat = Boat()
+drone = Drone()
+
+start_trip(car)
+start_trip(boat)
+start_trip(drone)
